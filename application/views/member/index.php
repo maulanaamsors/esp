@@ -11,7 +11,7 @@
 		<div class="col-xs-2">
 		</div>
 		<form method="post" action="<?=base_url('member/fitur');?>">
-			<input type="hidden" value="morse" name="sandi">
+			<input type="hidden" value="Morse" name="sandi">
 			<button class="col-xs-4 index-sandi btn btn-lg btn-sandi">
 				<center>
 					<h3>Morse</h3>
@@ -22,7 +22,7 @@
 		<div class="col-xs-2">
 		</div>
 		<form method="post" action="<?=base_url('member/fitur');?>">
-			<input type="hidden" value="semaphore" name="sandi">
+			<input type="hidden" value="Semaphore" name="sandi">
 			<button type="submit" class="col-xs-4 index-sandi btn btn-lg btn-sandi">
 				<center>
 					<h3>Semaphore</h3>

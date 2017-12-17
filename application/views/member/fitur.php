@@ -1,6 +1,6 @@
 <body>
 
-<h3 class="text-center">Judul Sandi</h3>
+<h3 class="text-center">Sandi <?=$sandi->sandi?></h3>
 <div class="row">
 	<div class="col-sm-2">
 	</div>
@@ -37,23 +37,13 @@
 					</div>
 				</div>
 				</a>
-				<a href="<?=base_url('member/logout');?>">
-					<div class="col-sm-4">
-						<div class="well" style="background-color: #FBC02D; color: white;">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="circle-avatar" style="background-image: url('<?= base_url("assets/img/gambar.jpg");?>'); border: 3px solid"></div>
-								</div>
-							</div>
-							<div class="row">
-								<h3>Logout</h3>
-							</div>
-						</div>
-					</div>
-				</a>
 			</div>
 		<div class="row">
 			<div class="col-sm-12">
+					<div class="col-sm-2">
+						<a href="<?=base_url('member/logout');?>" class="btn btn-sm pull-right btn-danger"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out
+						</a>
+					</div>
 				<div class="col-sm-4 pull-right">
 					Ranking-mu : #4 <a href="ranking.php"><button class="btn btn-sm pull-right btn-success">Lihat Ranking</button></a>
 				</div>

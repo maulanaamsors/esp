@@ -6,11 +6,14 @@
 		<div class="col-sm-4">
 		</div>
 		<div class="col-sm-4 border"><br>
-			<label>Email <i class="glyphicon glyphicon-envelope"></i></label><br> 	 	
+			<label>Email <i class="glyphicon glyphicon-envelope"></i></label><br> 
+			<input type="hidden" value="<?=$sandi->sandi;?>" name="sandi">	 	
 			<input type="email" name="email" placeholder="Email" class="form-control"><br>
 			<label>Password <i class="glyphicon glyphicon-lock"></i></label><br> 	
 			<input type="Password" name="password" placeholder="Password" class="form-control"><br>
 			<input type="submit" class="btn btn-lg btn-info pull-right" value="Login">
+			<span class="pull-right">&nbsp;&nbsp;</span>
+			<a href="<?= base_url('login/register');?>" class="pull-right" style="margin-top:25px;">Registrasi</a>
 		</div>
 		<div class="col-sm-4">
 		</div>
