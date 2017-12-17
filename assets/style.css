@@ -1,0 +1,211 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: #e2e2e2;
+	overflow-x: hidden;
+/*    font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea{
+	height: 300px;
+}
+
+div.index{
+	background-color: #3BB2F1;
+	background-image: url("img/BG-1.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 100vh;
+}
+
+button.index-sandi{
+	margin-top:100px;
+	padding: 10px 50px 30px 50px;
+	color: white;
+	transition: ease-in-out 0.2s;
+	background-color: rgba(0,137,123 ,1);
+	min-height: 275px;
+}
+
+button.btn-sandi:hover{
+	border: 1px solid #004D40;
+	color: white;
+	box-shadow: inset 0 0 0 9999px rgba(0,0,0,0.2);
+	transition: ease-in-out 0.2s;
+	background-color: rgba(0,137,123 ,0.5);
+}
+
+div.border{
+	border: 1px solid #5bc0de;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	border-radius: 3px;
+	background: #f9f9f9;
+}
+
+div.profile-head{
+	margin-bottom: -80px;
+	margin-top:20px;
+
+    /* make it responsive */
+    height:200px;
+    display:block;
+    
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+}
+
+li{
+	list-style: none;
+	margin-bottom:10px;
+}
+
+div.profile-bottom{
+	margin-top: -80px;
+	padding-top:100px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.profile-foto{
+	z-index: 2;
+	margin-left: 40%;
+}
+
+div.ranking-board{
+	height: 500px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+div.ranking{
+	padding-top: 10px;
+}
+
+div.row-ranking{
+	margin-bottom: 10px;
+	margin-left:10px;
+}
+
+img.ranking{
+	width: 50px;
+	height: 50px;
+	margin-left: -40px;
+}
+
+div.materi{
+	min-height: 500px;
+	max-height: 500px;
+}
+
+div.soal{
+	height: 300px;
+	max-height: 300px;
+}
+
+div.soal-div{
+	min-height: 300px;
+	max-height: 300px;
+}
+
+div.jawab{
+	margin-top:20px;
+}
+
+div.circle-avatar{
+    /* make it responsive */
+    max-width: 100%;
+    width:100%;
+    height:auto;
+    display:block;
+    /* div height to be the same as width*/
+    padding-top:100%;
+    
+    /* make it a cirkle */
+    border-radius:50%;
+    
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 63%;
+}
+
+ul.latihan{
+	margin-top:20px;
+	margin-left: -30px;
+}
+
+li.latihan{
+	display: inline;
+	margin-right: 20px;
+}
+
+button.pilih{
+	margin-bottom:-300px;
+	padding: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+div.admin-header{
+	height: 7vh;
+	background-color: #f44336;
+	color: white;
+}
+
+div.admin-sidebar{
+	height: 93vh;
+	background-color: #263238;
+	color: white;
+}
+
+div.admin-box{
+	height: 100px;
+	background-color: white;
+}
+
+div.admin-ranking-header{
+	width: 100%;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #D32F2f;
+}
+
+div.admin-ranking-konten{
+	background-color: #fff;
+	border: 1px solid;
+	color: #000;
+	width: 100%;
+	margin-top: -20px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+li.admin-sidebar{
+	margin-top:10%;
+	margin-left: -25px;
+	padding: 10px;
+}
+
+li.admin-sidebar:hover{
+	margin-top:10%;
+	background-color: rgba(255,255,255,0.2);
+	cursor: pointer;
+}

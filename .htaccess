@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /elearning_sandipramuka/
+
+RewriteCond $1 !^(index.php|asset|user_guide|dist)
+RewriteRule ^(.*)$ index.php?/$1 [L]
