@@ -75,7 +75,6 @@ class Login extends CI_Controller {
  
         if($cekMember->num_rows() == 1) {
          	foreach ($cekMember->result() as $c) {
-                $data_user['session_sandi'] 		= $sandi;
                 $data_user['member_email']          = $c->email;
                 $data_user['member_nama']           = $c->namaMember;
                 
