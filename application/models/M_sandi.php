@@ -8,25 +8,16 @@ class m_sandi extends CI_Model {
 		
 	}
   
-    public function tampil()
-    {
-    	 return $this->db->get('barang');
-    }
-
-    public function getSandiMorse(){
+    public function getAktifSandi(){
         $this->db->select('*');
         $this->db->from('sandi');
-        $this->db->where('sandi', 'Morse');
+        $this->db->where('status', 'aktif');
         $query = $this->db->get();
         return $query;
     }
 
-    public function getSandiSemaphore(){
-        $this->db->select('*');
-        $this->db->from('sandi');
-        $this->db->where('sandi', 'Semaphore');
-        $query = $this->db->get();
-        return $query;
+    public function updateAktifStatus($idSandi, $data){
+        $this->db->where('idSandi', $idSandi);
+        $this->db->update('sandi', $data);
     }
-	
 }

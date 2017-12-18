@@ -13,19 +13,8 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
-		$sandi = $this->input->post('sandi');
-
-		if ($sandi == 'Morse') {
-			$data['sandi'] = $this->m_sandi->getSandiMorse()->row();
-			$data['isi'] = 'member/login';
-			$this->load->view('member/home',$data);			 
-		}else{
-			$data['sandi'] = $this->m_sandi->getSandiSemaphore()->row();
-			$data['isi'] = 'member/login';
-			$this->load->view('member/home',$data);	
-		}
-
-
+		$data['isi'] = 'member/login';
+		$this->load->view('member/home',$data);			 
 	}	
 
 	public function register()

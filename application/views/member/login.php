@@ -6,8 +6,7 @@
 		<div class="col-sm-4">
 		</div>
 		<div class="col-sm-4 border"><br>
-			<label>Email <i class="glyphicon glyphicon-envelope"></i></label><br> 
-			<input type="hidden" value="<?=$sandi->sandi;?>" name="sandi">	 	
+			<label>Email <i class="glyphicon glyphicon-envelope"></i></label><br> 	 	
 			<input type="email" name="email" placeholder="Email" class="form-control"><br>
 			<label>Password <i class="glyphicon glyphicon-lock"></i></label><br> 	
 			<input type="Password" name="password" placeholder="Password" class="form-control"><br>
@@ -23,7 +22,7 @@
 	<div class="col-sm-4">
 	</div>
 	<div class="col-sm-4"><br>
-		<a href="index.php"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button></a>
+		<a href="<?=base_url('') ?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button></a>
 	<div>
 	<div class="col-sm-4">
 	</div>

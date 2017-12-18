@@ -1,6 +1,6 @@
 <body>
 
-<h3 class="text-center" >Latihan - Judul Sandi</h3>
+<h3 class="text-center" >Latihan - <?=$sandi->sandi;?></h3>
 <div class="row">
 	<div class="col-sm-2">
 	</div>
@@ -39,7 +39,7 @@
 	<div class="col-sm-2">
 	</div>
 	<div class="col-sm-4"><br>
-		<a href="<?=base_url('member/fitur');?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button></a>
+		<a href="<?php echo base_url('member/fitur');?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button></a>
 	<div>
 	<div class="col-sm-4">
 	</div>

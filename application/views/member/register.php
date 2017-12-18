@@ -5,7 +5,7 @@
 	<div class="col-sm-4">
 	</div>
 	<div class="col-sm-4 border"><br>
-	<form action="<?=base_url('login/register');?>" method="post">
+	<form action="<?php echo base_url('login/register');?>" method="post">
 		<font color="red"> <?php echo validation_errors();?> </font>
 		
 		<?php if($this->session->flashdata('info')):?>
@@ -41,7 +41,7 @@
 	<div class="col-sm-4">
 	</div>
 	<div class="col-sm-4"><br>
-		<a href="<?=base_url('');?>" class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button>
+		<a href="<?php echo base_url('');?>" class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button>
 	<div>
 	<div class="col-sm-4">
 	</div>

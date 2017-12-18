@@ -23,7 +23,7 @@
 	<div class="col-sm-4">
 	</div>
 	<div class="col-sm-4"><br>
-		<a href="profile.php"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Profile</button></a>
+		<a href="<?=base_url('member/fitur/profil');?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Profile</button></a>
 	<div>
 	<div class="col-sm-4">
 	</div>

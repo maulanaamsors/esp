@@ -32,7 +32,7 @@
 	<div class="col-sm-3">
 	</div>
 	<div class="col-sm-6"><br>
-		<button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</button>
+		<a href="<?=base_url('member/fitur');?>" class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Halaman Utama</a>
 	<div>
 	<div class="col-sm-3">
 	</div>

@@ -6,6 +6,7 @@ class Kuis extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model(array('m_sandi'));
 		$this->load->library('form_validation');
 	}
 
@@ -16,6 +17,7 @@ class Kuis extends CI_Controller {
         if ($email==NULL) {
             redirect('login'); 
         }else {
+        	$data['sandi'] = $this->m_sandi->getAktifSandi()->row();
         	$data['isi'] = 'member/latihan';
 			$this->load->view('member/home',$data);
         }

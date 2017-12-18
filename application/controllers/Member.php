@@ -23,26 +23,32 @@ class Member extends CI_Controller {
 		$sandi    	= $this->session->userdata('session_sandi');
 		$email    	= $this->session->userdata('member_email');  
 
+        if ($sandimasuk == 'Morse') {
+        		$idSandi = 2;
+        		$data1['sandi'] = 'Semaphore';
+				$data1['status'] = 'tidak';
+        		$this->m_sandi->updateAktifStatus($idSandi,$data1);
+        		$idSandi = 1;
+        		$data2['sandi'] = 'Morse';
+				$data2['status'] = 'aktif';
+        		$this->m_sandi->updateAktifStatus($idSandi,$data2);
+        }else{
+        		$idSandi = 1;
+        		$data1['sandi'] = 'Morse';
+				$data1['status'] = 'tidak';
+        		$this->m_sandi->updateAktifStatus($idSandi,$data1);
+        		$idSandi = 2;
+        		$data2['sandi'] = 'Semaphore';
+				$data2['status'] = 'aktif';
+        		$this->m_sandi->updateAktifStatus($idSandi,$data2);
+        }
+
         if ($email==NULL) {
-        	if ($sandimasuk == 'Morse') {
-        		$data['sandi'] = $this->m_sandi->getSandiMorse()->row();
-        		$data['isi'] = 'member/login';
-				$this->load->view('member/home',$data);
-        	}else{
-        		$data['sandi'] = $this->m_sandi->getSandiSemaphore()->row();
-        		$data['isi'] = 'member/login';
-				$this->load->view('member/home',$data);
-        	}
+			redirect('login');
         }else {
-        	if (($sandimasuk == 'Morse') || ($sandi == 'Morse')) {
-        		$data['sandi'] = $this->m_sandi->getSandiMorse()->row();
+        		$data['sandi'] = $this->m_sandi->getAktifSandi()->row();
         		$data['isi'] = 'member/fitur';
 				$this->load->view('member/home',$data);
-        	}else if(($sandimasuk == 'Semaphore') || ($sandi == 'Semaphore')){
-        		$data['sandi'] = $this->m_sandi->getSandiSemaphore()->row();
-        		$data['isi'] = 'member/fitur';
-				$this->load->view('member/home',$data);
-        	}
         }
 	}
 
@@ -57,6 +63,17 @@ class Member extends CI_Controller {
 			$this->load->view('member/home',$data);
         }
 
+	}
+
+	public function edit_profil(){
+		if($this->input->post('simpan')){
+				
+		}
+		else 
+		{
+			$data['isi'] = 'member/edit_profile';
+			$this->load->view('member/home',$data);
+		}
 	}
 
 	function logout()

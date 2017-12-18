@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17 Des 2017 pada 10.45
+-- Generation Time: 18 Des 2017 pada 16.19
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -75,6 +75,7 @@ CREATE TABLE `kuis` (
 CREATE TABLE `materi` (
   `idMateri` int(11) NOT NULL,
   `idSandi` int(11) NOT NULL,
+  `judul` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
   `lampiranMateri` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -88,7 +89,7 @@ CREATE TABLE `materi` (
 CREATE TABLE `member` (
   `idMember` int(11) NOT NULL,
   `namaMember` char(50) NOT NULL,
-  `jk` enum('L','P') NOT NULL,
+  `jk` enum('L','P','-') NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `statusPendidikan` char(20) NOT NULL,
@@ -102,7 +103,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`idMember`, `namaMember`, `jk`, `email`, `password`, `statusPendidikan`, `tglLahir`, `statusOnline`, `foto`) VALUES
-(1, 'Maulana Amsor Sidik', 'L', 'maulanaamsors@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'Kuliah', '1996-10-02', 'Tidak', 'aku.jpg');
+(1, 'Maulana Amsor Sidik', 'L', 'maulanaamsors@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'Kuliah', '1996-10-02', 'Tidak', 'aku.jpg'),
+(5, 'maulana', '-', 'maulanaas@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'SMK', '1996-10-02', 'Tidak', '');
 
 -- --------------------------------------------------------
 
@@ -126,8 +128,17 @@ CREATE TABLE `rangking` (
 
 CREATE TABLE `sandi` (
   `idSandi` int(11) NOT NULL,
-  `sandi` varchar(50) NOT NULL
+  `sandi` varchar(50) NOT NULL,
+  `status` enum('aktif','tidak') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `sandi`
+--
+
+INSERT INTO `sandi` (`idSandi`, `sandi`, `status`) VALUES
+(1, 'Morse', 'tidak'),
+(2, 'Semaphore', 'aktif');
 
 --
 -- Indexes for dumped tables
@@ -203,7 +214,7 @@ ALTER TABLE `materi`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `idMember` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idMember` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `rangking`
 --
@@ -213,7 +224,7 @@ ALTER TABLE `rangking`
 -- AUTO_INCREMENT for table `sandi`
 --
 ALTER TABLE `sandi`
-  MODIFY `idSandi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idSandi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

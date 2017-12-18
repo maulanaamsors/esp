@@ -6,7 +6,7 @@
 		<div class="col-sm-12 border"><br>
 			<div class="col-sm-12">
 				<label class="pull-left" style="padding-top:10px;">Last Online : </label>
-				<a href="edit_profile.php"><button class="btn btn-info pull-right">Edit Profile</button></a>
+				<a href="<?=base_url('member/fitur/profil/ubah');?>"><button class="btn btn-info pull-right">Edit Profile</button></a>
 			</div>
 			<div class="col-sm-12 profile-head" style="background-image: url('gambar.jpg');">
 			</div>
@@ -25,7 +25,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-4"><br>
-			<a href="<?=base_url('member/fitur'); ?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Kembali</button></a>
+			<a href="<?php echo base_url('member/fitur'); ?>"><button class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i> Kembali</button></a>
 		<div>
 	</div>
 </div>
