@@ -12,16 +12,21 @@
 			</div>
 			<div class="col-sm-12 profile-head" style="background-image: url('gambar.jpg');">
 			</div>
-			<div class="col-sm-2 profile-foto">
-				<div class="circle-avatar" style="background-image: url('gambar.jpg');"></div>
+			<div class="row">
+				<div class="col-sm-2 profile-foto">
+					<!-- background-image: url('gambar.jpg'); -->
+					<div class="circle-avatar" style="background-color: black"></div>
+				</div>
 			</div>
-			<div class="col-sm-6 profile-bottom">
-				<label><b class="glyphicon glyphicon-user"></b> Nama Lengkap</label><br>
-				<label><b class="glyphicon glyphicon-king"></b> Ranking #1 </label><br>
-			</div>
-			<div class="col-sm-5 profile-bottom">
-				<label><b class="glyphicon glyphicon-education"></b> Status Pendidikan</label><br>
-				<label><b class="glyphicon glyphicon-calendar"></b> Tanggal Lahir</label>
+			<div class="row">
+				<div class="col-sm-6 profile-bottom">
+					<label><b class="glyphicon glyphicon-user"></b> Nama Lengkap</label><br>
+					<label><b class="glyphicon glyphicon-king"></b> Ranking #1 </label><br>
+				</div>
+				<div class="col-sm-5 profile-bottom">
+					<label><b class="glyphicon glyphicon-education"></b> Status Pendidikan</label><br>
+					<label><b class="glyphicon glyphicon-calendar"></b> Tanggal Lahir</label>
+				</div>
 			</div>
 		</div>
 	</div>
