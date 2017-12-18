@@ -34,11 +34,11 @@ class Member extends CI_Controller {
 				$this->load->view('member/home',$data);
         	}
         }else {
-        	if (($sandi == 'Morse') || ($sandimasuk == 'Morse')) {
+        	if (($sandimasuk == 'Morse') || ($sandi == 'Morse')) {
         		$data['sandi'] = $this->m_sandi->getSandiMorse()->row();
         		$data['isi'] = 'member/fitur';
 				$this->load->view('member/home',$data);
-        	}else if(($sandi == 'Semaphore') || ($sandimasuk == 'Semaphore')){
+        	}else if(($sandimasuk == 'Semaphore') || ($sandi == 'Semaphore')){
         		$data['sandi'] = $this->m_sandi->getSandiSemaphore()->row();
         		$data['isi'] = 'member/fitur';
 				$this->load->view('member/home',$data);
