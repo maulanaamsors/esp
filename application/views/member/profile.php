@@ -7,6 +7,8 @@
 			<div class="col-sm-12">
 				<label class="pull-left" style="padding-top:10px;">Last Online : </label>
 				<a href="<?=base_url('member/fitur/profil/ubah');?>"><button class="btn btn-info pull-right">Edit Profile</button></a>
+				<span class="pull-right">&nbsp;</span>
+				<a href="<?=base_url('member/fitur/profil/ubah');?>"><button class="btn btn-info pull-right">Edit Foto</button></a>
 			</div>
 			<div class="col-sm-12 profile-head" style="background-image: url('gambar.jpg');">
 			</div>
