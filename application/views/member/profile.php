@@ -14,8 +14,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-2 profile-foto">
-					<!-- background-image: url('gambar.jpg'); -->
-					<div class="circle-avatar" style="background-color: black"></div>
+					<div class="circle-avatar" style="background-image: url('gambar.jpg');"></div>
 				</div>
 			</div>
 			<div class="row">
