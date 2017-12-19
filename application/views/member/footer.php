@@ -38,4 +38,10 @@
             });
     });
 </script>
+
+<script src="<?php echo base_url('assets/bootstrap/js/bootstrap-datepicker.js');?>"></script>
+<script>
+$(".input-group.date").datepicker({autoclose: true, todayHighlight: true});
+</script>
+
 </body>

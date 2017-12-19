@@ -1,5 +1,4 @@
 <body>
-
 <h3 class="text-center" >Register</h3>
 <div class="row">
 	<div class="col-sm-4">
@@ -27,8 +26,11 @@
 		<h4><b> Data Pribadi </b></h4>
 		<label>Nama Lengkap <i class="glyphicon glyphicon-user"></i></label><br>
 		<input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" value="<?php echo set_value('nama')?>"><br>
-		<label>Tanggal Lahir <i class="glyphicon glyphicon-calendar"></i></label><br> 	
-		<input type="text" name="tanggal" placeholder="" class="form-control"  value="<?php echo set_value('tanggal')?>"><br>
+		<label>Tanggal Lahir <i class="glyphicon glyphicon-calendar"></i></label><br>
+		<div class="input-group date " data-date="" data-date-format="yyyy-mm-dd">
+			<input class="form-control" type="text" name="tanggal" readonly="readonly"   value="<?php echo set_value('tanggal')?>">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+		</div><br>
 		<label>Status Pendidikan <i class="glyphicon glyphicon-education"></i></label><br>
 		<input type="text" name="status" placeholder="Status Pendidikan" class="form-control" value="<?php echo set_value('status')?>"><br>
 		<input type="submit" class="btn btn-lg btn-info pull-right" value="Buat Akun" name="simpanregister">
