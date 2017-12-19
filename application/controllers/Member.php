@@ -23,7 +23,10 @@ class Member extends CI_Controller {
 		$sandi    	= $this->session->userdata('session_sandi');
 		$email    	= $this->session->userdata('member_email');  
 
-        if ($sandimasuk == 'Morse') {
+
+
+        if ($email==NULL) {
+        	if ($sandimasuk == 'Morse') {
         		$idSandi = 2;
         		$data1['sandi'] = 'Semaphore';
 				$data1['status'] = 'tidak';
@@ -32,7 +35,7 @@ class Member extends CI_Controller {
         		$data2['sandi'] = 'Morse';
 				$data2['status'] = 'aktif';
         		$this->m_sandi->updateAktifStatus($idSandi,$data2);
-        }else{
+        	}else{
         		$idSandi = 1;
         		$data1['sandi'] = 'Morse';
 				$data1['status'] = 'tidak';
@@ -41,9 +44,7 @@ class Member extends CI_Controller {
         		$data2['sandi'] = 'Semaphore';
 				$data2['status'] = 'aktif';
         		$this->m_sandi->updateAktifStatus($idSandi,$data2);
-        }
-
-        if ($email==NULL) {
+        	}
 			redirect('login');
         }else {
         		$data['sandi'] = $this->m_sandi->getAktifSandi()->row();
