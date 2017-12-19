@@ -15,7 +15,10 @@
 		<label>Nama Lengkap <i class="glyphicon glyphicon-user"></i></label><br>
 		<input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" value="<?=$member->namaMember?>"><br>
 		<label>Tanggal Lahir <i class="glyphicon glyphicon-calendar"></i></label><br> 	
-		<input type="text" name="tanggal" placeholder="" class="form-control" value="<?=$member->tglLahir?>"><br>
+		<div class="input-group date " data-date="" data-date-format="yyyy-mm-dd">
+			<input class="form-control" type="text" name="tanggal" readonly="readonly"   value="<?php echo set_value('tanggal')?>">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+		</div><br>
 		<label>Status Pendidikan <i class="glyphicon glyphicon-education"></i></label><br>
 		<input type="text" name="status" placeholder="Status Pendidikan" class="form-control" value="<?=$member->statusPendidikan?>"><br>
 		<input type="submit" class="btn btn-info pull-right" value="Simpan" name="simpan">
