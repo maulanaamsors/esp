@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 //Member
 $route['member/fitur/profil'] = "member/profil";
 $route['member/fitur/profil/ubah'] = "member/edit_profil";
+$route['member/fitur/profil/ubahfoto'] = "member/edit_foto";
 //Materi
 $route['member/fitur/materi'] = "materi/index";
 

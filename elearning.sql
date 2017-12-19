@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 18 Des 2017 pada 16.19
+-- Generation Time: 19 Des 2017 pada 18.16
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -89,22 +89,22 @@ CREATE TABLE `materi` (
 CREATE TABLE `member` (
   `idMember` int(11) NOT NULL,
   `namaMember` char(50) NOT NULL,
-  `jk` enum('L','P','-') NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `statusPendidikan` char(20) NOT NULL,
   `tglLahir` date NOT NULL,
   `statusOnline` enum('Ya','Tidak') NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `fotoSampul` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `member`
 --
 
-INSERT INTO `member` (`idMember`, `namaMember`, `jk`, `email`, `password`, `statusPendidikan`, `tglLahir`, `statusOnline`, `foto`) VALUES
-(1, 'Maulana Amsor Sidik', 'L', 'maulanaamsors@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'Kuliah', '1996-10-02', 'Tidak', 'aku.jpg'),
-(5, 'maulana', '-', 'maulanaas@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'SMK', '1996-10-02', 'Tidak', '');
+INSERT INTO `member` (`idMember`, `namaMember`, `email`, `password`, `statusPendidikan`, `tglLahir`, `statusOnline`, `foto`, `fotoSampul`) VALUES
+(1, 'Maulana Amsor Sidik', 'maulanaamsors@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'SMK', '1996-10-01', 'Tidak', 'aku.jpg', 'sampul1.jpg'),
+(5, 'maulana', 'maulanaas@gmail.com', 'e4b6849ac573cf037cc7f5cc0384c2e4', 'SMK', '1996-10-02', 'Tidak', '', '');
 
 -- --------------------------------------------------------
 
@@ -137,8 +137,8 @@ CREATE TABLE `sandi` (
 --
 
 INSERT INTO `sandi` (`idSandi`, `sandi`, `status`) VALUES
-(1, 'Morse', 'tidak'),
-(2, 'Semaphore', 'aktif');
+(1, 'Morse', 'aktif'),
+(2, 'Semaphore', 'tidak');
 
 --
 -- Indexes for dumped tables
