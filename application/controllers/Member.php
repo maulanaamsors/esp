@@ -21,7 +21,8 @@ class Member extends CI_Controller {
 	{
 		$sandimasuk = $this->input->post('sandi');
 		$sandi    	= $this->session->userdata('session_sandi');
-		$email    	= $this->session->userdata('member_email');  
+		$email    	= $this->session->userdata('member_email');
+		//abcd  
 		
         if ($email==NULL) {
         	if ($sandimasuk == 'Morse') {
