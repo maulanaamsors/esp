@@ -15,12 +15,10 @@ class m_member extends CI_Model {
         $tanggal = $this->input->post('tanggal');
         $status = $this->input->post('status');
         $statusOnline = 'Tidak';
-        $jk = '-';
         $foto ='';              
         
         $object = array(
              'namaMember' => $namaMember,
-             'jk' 		  => $jk,
              'email'      => $email,
              'password'   => md5($password),
              'statusPendidikan'   => $status,
@@ -30,6 +28,42 @@ class m_member extends CI_Model {
         );
 
         return $this->db->insert('member', $object);     
+    }
+
+    public function ubah_member($email, $data){
+        $this->db->where('email', $email);
+        $this->db->update('member', $data);
+    }
+
+    public function ubahfotomember(){
+        // $foto = $this->upload->();
+
+        // $this->load->library('upload');
+        // $config['upload_path'] = './assets/img/pamflet'; //path folder
+        // $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+        // $config['file_name'] = $nama; //nama yang terupload nantinya
+        // $this->upload->initialize($config);
+        // if($_FILES['foto']['name'])
+        // {
+        //     if ($this->upload->do_upload('foto'))
+        //     {
+        //         $gbr = $this->upload->data();
+        //         define( 'WP_MEMORY_LIMIT', '256M' );
+        //         $source_url=$config['upload_path'].'/'.$gbr['file_name'];
+        //         $image = imagecreatefromjpeg($source_url);
+        //         imagejpeg($image, $config['upload_path'].'/'.$gbr['file_name'], 50);
+        //         $input = array(
+        //             'idEvent'     =>$kar.$kd,
+        //             'namaEvent'   =>$nama,
+        //             'deskripEvent'=>$deskripsi,
+        //             'pamflet'     =>$gbr['file_name'],
+        //             'status'      =>"Belum Aktif",
+        //             'idJadwal'    =>$jadwal->idJadwal,
+        //             'idAdmin'     =>''
+        //         );
+        //     }
+        // }
+        //         $this->db->insert('event',$input);
     }
 
     function getData_Member($email){

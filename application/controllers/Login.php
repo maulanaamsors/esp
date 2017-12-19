@@ -61,7 +61,13 @@ class Login extends CI_Controller {
         $email      = $this->input->post('email');
         $password   = md5($this->input->post('password'));
         $cekMember  = $this->m_login->getMember($email, $password,1);
- 
+        $cekMember1  = $this->m_member->getData_Member($email);
+
+        if ($cekMember1->num_rows() == 0 ) {
+                $this->session->set_flashdata('peringatan', 'Email belum terdaftar');
+                redirect('login');
+        }
+
         if($cekMember->num_rows() == 1) {
          	foreach ($cekMember->result() as $c) {
                 $data_user['member_email']          = $c->email;
@@ -71,8 +77,8 @@ class Login extends CI_Controller {
                 redirect('member/fitur');
             }
         }else{
-            $data['isi'] = 'member/login';
-			$this->load->view('member/home',$data); 
+            $this->session->set_flashdata('peringatan', 'Email dan Password salah');
+            redirect('login'); 
         }
          
 	}
